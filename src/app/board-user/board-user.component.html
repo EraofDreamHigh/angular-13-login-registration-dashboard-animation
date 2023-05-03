@@ -1,0 +1,110 @@
+<div class="container">
+  <header class="header animate-fade">
+    <h1>{{ content }}</h1>
+  </header>
+  <div class="row">
+    <div class="col-sm-3 animate-left">
+      <ul class="list-group " >
+        <li class="list-group-item table_name text-center">MY APPS</li>
+        <li class="list-group-item app-style text-center">
+          <img
+            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+            class="rounded-circle"
+            alt="Cinque Terre"
+            width="40"
+            height="40"
+          />
+          <p style="margin-bottom: 0px">APP1</p>
+        </li>
+        <li class="list-group-item app-style text-center">
+          <img
+            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+            class="rounded-circle"
+            alt="Cinque Terre"
+            width="40"
+            height="40"
+          />
+          <p style="margin-bottom: 0px">APP2</p>
+        </li>
+        <li class="list-group-item app-style text-center">
+          <img
+            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+            class="rounded-circle"
+            alt="Cinque Terre"
+            width="40"
+            height="40"
+          />
+          <p style="margin-bottom: 0px">APP3</p>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-9 animate-right">
+      <ul class="list-group " >
+        <li class="list-group-item table_name text-center">DASHBOARD</li>
+      </ul>
+      <table class="table table-bordered text-center">
+        <thead>
+          <tr>
+            <th>NAME</th>
+            <th>STATUS</th>
+            <th>LAST LOGIN</th>
+            <th>CONNECT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>APP1</td>
+            <td>{{ status1 ? "Online" : "Offline" }}</td>
+            <td>{{ logintime1 }}</td>
+            <td>
+              <a
+                [ngClass]="{
+                  btn: true,
+                  'connect-on': DangerClass1,
+                  'connect-off': PrimaryClass1
+                }"
+                (click)="clickHandler(1)"
+              >
+              {{ status1 ? "Disconnect" : "Connect" }}
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>APP2</td>
+            <td>{{ status2 ? "Online" : "Offline" }}</td>
+            <td>{{ logintime2 }}</td>
+            <td>
+              <a
+                [ngClass]="{
+                  btn: true,
+                  'connect-on': DangerClass2,
+                  'connect-off': PrimaryClass2
+                }"
+                (click)="clickHandler(2)"
+              >
+                {{ status2 ? "Disconnect" : "Connect" }}
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>APP3</td>
+            <td>{{ status3 ? "Online" : "Offline" }}</td>
+            <td>{{ logintime3 }}</td>
+            <td>
+              <a
+                [ngClass]="{
+                  btn: true,
+                  'connect-on': DangerClass3,
+                  'connect-off': PrimaryClass3
+                }"
+                (click)="clickHandler(3)"
+              >
+                {{ status3 ? "Disconnect" : "Connect" }}
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
